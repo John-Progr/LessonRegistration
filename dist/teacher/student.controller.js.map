@@ -1,0 +1,1 @@
+{"version":3,"file":"student.controller.js","sourceRoot":"","sources":["../../src/teacher/student.controller.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,2CAA4E;AAC5E,gEAA4D;AAM5D,IAAa,wBAAwB,GAArC,MAAa,wBAAwB;IAEjC,YAA6B,cAA8B;QAA9B,mBAAc,GAAd,cAAc,CAAgB;IAAG,CAAC;CAuBlE,CAAA;AAzBY,wBAAwB;IADpC,IAAA,mBAAU,EAAC,8BAA8B,CAAC;qCAGM,gCAAc;GAFlD,wBAAwB,CAyBpC;AAzBY,4DAAwB"}
