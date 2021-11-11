@@ -30,7 +30,9 @@ export class StudentService {
     async createStudent(name: string, teacher: string): Promise<Student>{
         return this.studentRepository.create({
             id: uuid4(),
-            name,
+            fullname,
+            email,
+            password,
             teacher
         })
         

@@ -14,10 +14,19 @@ export class Student{
         @Prop()
         id: string
 
+        
+        @Prop()
+        fullname: string
 
 
         @Prop()
-        name: string
+        email: string
+
+
+        @Prop()
+        password: string
+
+      
 
 
 
