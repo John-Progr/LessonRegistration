@@ -9,26 +9,26 @@ import { FindTeacherResponseDto } from "src/teacher/dto/teacher.dto";
 
 
 @Injectable()
-export class StudentsRepository{
-    constructor(@InjectModel(Teacher.name) private studentModel: Model<TeacherDocument>){}
+export class TeachersRepository{
+    constructor(@InjectModel(Teacher.name) private teacherModel: Model<TeacherDocument>){}
 
-        async findOne(studentFilterQuery : FilterQuery<TeacherDocument>): Promise<Teacher>{
-            return this.studentModel.findOne(studentFilterQuery);
+        async findOne(teachersFilterQuery : FilterQuery<TeacherDocument>): Promise<Teacher>{
+            return this.teacherModel.findOne(teachersFilterQuery);
 
         }
 
 
-        async find(studentsFilterQuery: FilterQuery<TeacherDocument>): Promise<Teacher[]> {
-            return this.studentModel.find(studentsFilterQuery);
+        async find(teachersFilterQuery: FilterQuery<TeacherDocument>): Promise<Teacher[]> {
+            return this.teacherModel.find(teachersFilterQuery);
         }
 
         async create(teacher: Teacher): Promise<Teacher> {
-            const newStudent= new this.studentModel(teacher)
-            return newStudent.save();
+            const newTeacher= new this.teacherModel(teacher)
+            return newTeacher.save();
         }
 
-        async findOneAndUpdate(studentFilterQuery: FilterQuery<TeacherDocument>, student:Partial<Teacher>): Promise<Teacher>{
-            return this.studentModel.findOneAndUpdate(studentFilterQuery, student)
+        async findOneAndUpdate(teacherFilterQuery: FilterQuery<TeacherDocument>, teacher:Partial<Teacher>): Promise<Teacher>{
+            return this.teacherModel.findOneAndUpdate(teacherFilterQuery, teacher)
         }
 
 
