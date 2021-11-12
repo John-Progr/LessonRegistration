@@ -34,6 +34,7 @@ export class StudentService {
             email,
             password,
             teacher
+           
         })
         
     }
