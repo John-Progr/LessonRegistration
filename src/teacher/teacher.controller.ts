@@ -1,5 +1,6 @@
 import { Controller, Get, Put, Param, ParseUUIDPipe } from '@nestjs/common';
 import {FindTeacherResponseDto} from './dto/teacher.dto'
+import { Teacher } from './schemas/teacher.schema';
 import { TeacherService } from './teacher.service';
 
 @Controller('teachers')
@@ -9,7 +10,7 @@ export class TeacherController {
 
 
     @Get()
-    getTeachers() : FindTeacherResponseDto[]{
+    getTeachers() : Promise<Teacher[]>{
         return this.teacherService.getTeachers()
     }
 
@@ -17,8 +18,8 @@ export class TeacherController {
     @Get('/:teacherid')
     getTeacherById(
         @Param('teacherId',new ParseUUIDPipe()) teacherId: string
-    ): FindTeacherResponseDto{
-        return this.teacherService.getTeachersById(teacherId);
+    ): Promise<Teacher>{
+        return this.teacherService.getTeacherById(teacherId);
 
     }
 

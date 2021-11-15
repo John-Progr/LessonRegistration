@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { StudentModule } from 'src/student/student.module';
-import { TeacherModule } from 'src/teacher/teacher.module';
+import { StudentModule } from '../student/student.module';
+import { TeacherModule } from '../teacher/teacher.module';
+import { AuthModule} from '../auth/auth.module';
 
 
 @Module({

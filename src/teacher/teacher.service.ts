@@ -8,7 +8,7 @@ import { TeachersRepository } from './teacher.repository';
 import { UpdateTeacherDto } from './dto/teacher.dto';
 
 @Injectable()
-export class StudentService {
+export class TeacherService {
 
     constructor(private readonly teacherRepository: TeachersRepository){}
 
@@ -27,10 +27,12 @@ export class StudentService {
 
  
 
-    async createTeacher(name: string, teacher: string): Promise<Teacher>{
+    async createTeacher(fullname: string, email: string, password: string): Promise<Teacher>{
         return this.teacherRepository.create({
             id: randomUUID(),
-            name
+            fullname,
+            email,
+            password
 
            
            

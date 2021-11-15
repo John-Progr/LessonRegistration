@@ -21,5 +21,8 @@ export class StudentResponseDto{
 
  export class UpdateStudentDto{
     name: string;
-    teacher: string
+    fullname: string
+    email: string
+    password: string
+   
 }
