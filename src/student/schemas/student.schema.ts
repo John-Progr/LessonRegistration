@@ -13,7 +13,6 @@ export type StudentDocument= Student & Document;
 export class Student{
         @Prop()
         id: string
-
         
         @Prop()
         fullname: string
@@ -26,13 +25,6 @@ export class Student{
         @Prop()
         password: string
 
-      
-
-
-
-
-        @Prop()
-        teacher: string
 
 
 }

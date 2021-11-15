@@ -27,14 +27,12 @@ export class StudentService {
 
  
 
-    async createStudent(name: string, teacher: string): Promise<Student>{
+    async createStudent(fullname: string, email: string, password: string): Promise<Student>{
         return this.studentRepository.create({
             id: uuid4(),
             fullname,
             email,
-            password,
-            teacher
-           
+            password
         })
         
     }
